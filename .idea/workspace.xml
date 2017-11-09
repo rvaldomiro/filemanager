@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef099b49-8650-4264-8bd2-a21ec8456e91" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/FileManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/GerarPlano.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/MoverArquivosJob.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/flightplan/Airport.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/flightplan/Alternate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/flightplan/ApiParams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/flightplan/Destination.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/flightplan/Fuel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/flightplan/General.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/flightplan/OFP.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/flightplan/Origin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/flightplan/Times.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/flightplan/Weather.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/valdomiro/filemanager/flightplan/Weights.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/filemanager-1.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/filemanager-1.2.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/filemanager-1.3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/filemanager-1.4.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/original-filemanager-1.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/original-filemanager-1.2.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/original-filemanager-1.3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/original-filemanager-1.4.0.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,8 +28,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="322">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -277,11 +254,6 @@
               <item name="filemanager" type="b2602c69:ProjectViewProjectNode" />
               <item name="filemanager" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="filemanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filemanager" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -445,7 +417,7 @@
       <workItem from="1510156292674" duration="826000" />
       <workItem from="1510245007431" duration="2747000" />
       <workItem from="1510247867394" duration="1803000" />
-      <workItem from="1510249723883" duration="149000" />
+      <workItem from="1510249723883" duration="321000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro commit">
       <created>1510248056689</created>
@@ -517,11 +489,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510249610196</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Primeiro commit">
+      <created>1510249891108</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1510249891108</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27106000" />
+    <option name="totallyTimeSpent" value="27278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1002" extended-state="6" />
@@ -933,8 +912,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="322">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
