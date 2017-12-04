@@ -46,7 +46,7 @@ public class MoverArquivosJob implements Job {
 
                     if (fExtension.equals("xml") && fName.toLowerCase().contains("_xml_")) {
                         new GerarPlano(srcFile);
-                        System.out.println(SDF.format(new Date()) + " | Arquivo flightplan.txt gerado com sucesso!");
+                        System.out.println(SDF.format(new Date()) + " | Arquivo flightplan.dat gerado com sucesso!");
                         continue;
                     }
 

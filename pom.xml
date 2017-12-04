@@ -5,7 +5,7 @@
 
     <groupId>br.com.valdomiro</groupId>
     <artifactId>filemanager</artifactId>
-    <version>1.4.0</version>
+    <version>1.4.2</version>
     <packaging>jar</packaging>
 
     <name>filemanager</name>

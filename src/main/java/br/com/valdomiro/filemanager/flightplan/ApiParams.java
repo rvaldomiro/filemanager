@@ -4,4 +4,6 @@ public class ApiParams {
 
     public String route;
 
+    public String cargo;
+
 }

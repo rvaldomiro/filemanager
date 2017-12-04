@@ -23,11 +23,12 @@ public class GerarPlano {
                 rightPad("CI", 3) +
                 rightPad("ZFW", 6) +
                 rightPad("FUEL", 6) +
+                rightPad("CARGO",6) +
                 rightPad("TOW", 6) +
                 rightPad("BURN", 6) +
-                rightPad("PAX", 4) +
+                rightPad("| PAX", 6) +
                 rightPad("TOTAL", 6) +
-                rightPad("ALT", 5) +
+                rightPad("ALT  |", 7) +
                 "ROUTE";
 
         final String data = rightPad(ofp.general.icao_airline + ofp.general.flight_number, 8) +
@@ -37,11 +38,12 @@ public class GerarPlano {
                 rightPad(ofp.general.costindex, 3) +
                 rightPad(ofp.weights.est_zfw, 6) +
                 rightPad(ofp.fuel.plan_ramp, 6) +
+                rightPad(ofp.api_params.cargo,6) +
                 rightPad(ofp.weights.est_tow, 6) +
                 toTime(Integer.valueOf(ofp.times.est_time_enroute)) + " " +
-                rightPad(ofp.general.passengers, 4) +
+                rightPad("| " + ofp.general.passengers, 6) +
                 toTime(Integer.valueOf(ofp.times.endurance) + Integer.valueOf(ofp.times.contfuel_time)) + " " +
-                rightPad(ofp.alternate.icao_code, 5) +
+                rightPad(ofp.alternate.icao_code + " | ", 7) +
                 ofp.origin.plan_rwy + " " +
                 ofp.api_params.route + " " +
                 ofp.destination.plan_rwy + " // " +
@@ -51,7 +53,7 @@ public class GerarPlano {
 
         final String flightplan = header + "\n" + data + "\n\n" + weather;
 
-        writeStringToFile(new File("flightplan.txt"), flightplan);
+        writeStringToFile(new File("flightplan.dat"), flightplan);
 
         xmlFile.delete();
     }
