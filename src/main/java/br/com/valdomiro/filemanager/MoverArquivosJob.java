@@ -17,6 +17,7 @@ public class MoverArquivosJob implements Job {
 
     private final SimpleDateFormat SDF = new SimpleDateFormat("ddMMyy HHmmss");
 
+    @Override
     public void execute(final JobExecutionContext arg0) throws JobExecutionException {
         try {
             final File pFile = new File("filemanager.properties");
@@ -24,7 +25,6 @@ public class MoverArquivosJob implements Job {
             if (!pFile.exists()) {
                 new File("teste.flp").createNewFile();
 
-                // noinspection ResultOfMethodCallIgnored
                 pFile.createNewFile();
                 writeStringToFile(pFile, "flp=/tmp;rnteste.txt;cp");
             }
@@ -35,7 +35,7 @@ public class MoverArquivosJob implements Job {
             final File[] files = new File(".").listFiles();
 
             if (files != null) {
-                for (File srcFile : files) {
+                for (final File srcFile : files) {
                     if (srcFile.isDirectory()) {
                         continue;
                     }
@@ -45,9 +45,13 @@ public class MoverArquivosJob implements Job {
                     final String fExtension = fName.substring(fName.lastIndexOf(".") + 1).toLowerCase();
 
                     if (fExtension.equals("xml") && fName.toLowerCase().contains("_xml_")) {
-                        new GerarPlano(srcFile);
+                        new GerarPlanoTXT(srcFile);
                         System.out.println(SDF.format(new Date()) + " | Arquivo flightplan.dat gerado com sucesso!");
                         continue;
+                    }
+
+                    if (fExtension.equals("fpl")) {
+                        new GerarPlanoIVAO(srcFile);
                     }
 
                     for (final String hash : p.getStringArray(fExtension)) {
@@ -60,7 +64,7 @@ public class MoverArquivosJob implements Job {
                         boolean copyFile = false;
 
                         while (st.hasMoreTokens()) {
-                            String t = st.nextToken();
+                            final String t = st.nextToken();
 
                             if (t.startsWith("cp")) {
                                 copyFile = true;
@@ -78,7 +82,6 @@ public class MoverArquivosJob implements Job {
                         final File destFile = new File(targetDir + "/" + fName);
 
                         if (destFile.exists()) {
-                            // noinspection ResultOfMethodCallIgnored
                             destFile.delete();
                         }
 

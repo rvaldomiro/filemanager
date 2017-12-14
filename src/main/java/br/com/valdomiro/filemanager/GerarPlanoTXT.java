@@ -9,9 +9,9 @@ import java.io.File;
 import static org.apache.commons.io.FileUtils.writeStringToFile;
 import static org.apache.commons.lang3.StringUtils.rightPad;
 
-public class GerarPlano {
+public class GerarPlanoTXT {
 
-    public GerarPlano(final File xmlFile) throws Exception {
+    public GerarPlanoTXT(final File xmlFile) throws Exception {
         final JAXBContext jaxbContext = JAXBContext.newInstance(OFP.class);
         final Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
         final OFP ofp = (OFP) unmarshaller.unmarshal(xmlFile);
@@ -23,7 +23,7 @@ public class GerarPlano {
                 rightPad("CI", 3) +
                 rightPad("ZFW", 6) +
                 rightPad("FUEL", 6) +
-                rightPad("CARGO",6) +
+                rightPad("CARGO", 6) +
                 rightPad("TOW", 6) +
                 rightPad("BURN", 6) +
                 rightPad("| PAX", 6) +
@@ -38,7 +38,7 @@ public class GerarPlano {
                 rightPad(ofp.general.costindex, 3) +
                 rightPad(ofp.weights.est_zfw, 6) +
                 rightPad(ofp.fuel.plan_ramp, 6) +
-                rightPad(ofp.api_params.cargo,6) +
+                rightPad(String.valueOf(new Double(Double.valueOf(ofp.api_params.cargo) * 1000).intValue()), 6) +
                 rightPad(ofp.weights.est_tow, 6) +
                 toTime(Integer.valueOf(ofp.times.est_time_enroute)) + " " +
                 rightPad("| " + ofp.general.passengers, 6) +
@@ -62,11 +62,11 @@ public class GerarPlano {
         int minutes = seconds / 60;
 
         if (minutes >= 60) {
-            int hours = minutes / 60;
+            final int hours = minutes / 60;
             minutes %= 60;
 
             if (hours >= 24) {
-                int days = hours / 24;
+                final int days = hours / 24;
                 return String.format("%d days %02dh%02d", days, hours % 24, minutes);
             }
 
