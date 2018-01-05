@@ -27,3 +27,4 @@ src/main/resources/
 src/test/
 /target/
 /.idea/
+/.idea/workspace.xml
