@@ -25,4 +25,5 @@ hs_err_pid*
 flightplan.dat
 src/main/resources/
 src/test/
-target/generated-sources/
+/target/
+/.idea/
