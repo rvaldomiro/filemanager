@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>br.com.valdomiro</groupId>
   <artifactId>filemanager</artifactId>
-  <name>filemanager</name>
-  <version>1.5.0</version>
+  <name>File Manager</name>
+  <version>1.6.0</version>
   <build>
     <plugins>
       <plugin>
