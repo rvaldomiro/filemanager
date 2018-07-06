@@ -4,7 +4,7 @@
   <groupId>br.com.valdomiro</groupId>
   <artifactId>filemanager</artifactId>
   <name>File Manager</name>
-  <version>1.6.0</version>
+  <version>1.7.0</version>
   <build>
     <plugins>
       <plugin>
