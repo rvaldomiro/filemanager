@@ -7,9 +7,12 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+
+import static java.util.Collections.reverse;
+import static java.util.Collections.sort;
+import static org.apache.commons.io.FileUtils.writeLines;
 
 public class OrdenarCenarios {
 
@@ -75,8 +78,8 @@ public class OrdenarCenarios {
         }
 
         Integer id = areasHeader.size() + 1;
-        Collections.sort(areasOrdered);
-        Collections.reverse(areasOrdered);
+        sort(areasOrdered);
+        reverse(areasOrdered);
 
         for (final Area area1 : areasOrdered) {
             area1.setId(id);
@@ -116,7 +119,7 @@ public class OrdenarCenarios {
             writer.add(area1.toString());
         }
 
-        FileUtils.writeLines(file, writer);
+        writeLines(file, writer);
         srcFile.delete();
         System.out.println(SDF.format(new Date()) + " | Arquivo scenery.cfg.new gerado com sucesso!");
     }
