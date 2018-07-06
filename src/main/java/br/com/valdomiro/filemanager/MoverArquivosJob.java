@@ -44,6 +44,11 @@ public class MoverArquivosJob implements Job {
                     String fName = srcFile.getName();
                     final String fExtension = fName.substring(fName.lastIndexOf(".") + 1).toLowerCase();
 
+                    if (fName.equalsIgnoreCase("scenery.cfg")) {
+                        new OrdenarCenarios(srcFile);
+                        continue;
+                    }
+
                     if (fExtension.equals("xml") && fName.toLowerCase().contains("_xml_")) {
                         new GerarPlanoTXT(srcFile);
                         System.out.println(SDF.format(new Date()) + " | Arquivo flightplan.dat gerado com sucesso!");

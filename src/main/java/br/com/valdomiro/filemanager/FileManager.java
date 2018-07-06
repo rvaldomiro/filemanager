@@ -7,15 +7,15 @@ import org.quartz.impl.StdSchedulerFactory;
 
 public class FileManager {
 
-    private Scheduler scheduler;
+    private final Scheduler scheduler;
 
-    private FileManager() {
+    private FileManager() throws Exception {
         super();
+        scheduler = new StdSchedulerFactory().getScheduler();
     }
 
     public static void main(final String[] args) throws Exception {
-        final FileManager fileManager = new FileManager();
-        fileManager.start();
+        new FileManager().start();
     }
 
     private void addJobFila(final Class clazz, final String cronExpression)
@@ -36,7 +36,6 @@ public class FileManager {
     }
 
     private void start() throws Exception {
-        scheduler = new StdSchedulerFactory().getScheduler();
         addJobFila(MoverArquivosJob.class, "0/10 * * 1/1 * ? *");
         scheduler.start();
     }

@@ -3,3 +3,4 @@ target/
 /.idea/
 /flightplan.dat
 flightplan.dat
+scenery.cfg.new
