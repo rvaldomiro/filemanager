@@ -77,26 +77,21 @@ public class OrdenarCenarios {
             }
         }
 
-        Integer id = areasHeader.size() + 1;
         sort(areasOrdered);
         reverse(areasOrdered);
-
-        for (final Area area1 : areasOrdered) {
-            area1.setId(id);
-            area1.setLayer(id);
-            id++;
-        }
-
-        for (final Area area1 : areasFooter) {
-            area1.setId(id);
-            area1.setLayer(id);
-            id++;
-        }
 
         areas.clear();
         areas.addAll(areasHeader);
         areas.addAll(areasOrdered);
         areas.addAll(areasFooter);
+
+        int id = 1;
+
+        for (final Area areaFull : areas) {
+            areaFull.setId(id);
+            areaFull.setLayer(id);
+            id++;
+        }
 
         final List<String> writer = new ArrayList<String>();
 
