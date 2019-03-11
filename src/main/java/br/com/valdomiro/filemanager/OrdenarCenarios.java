@@ -70,7 +70,7 @@ public class OrdenarCenarios {
 
             if (local.startsWith("scenery") || local.startsWith("orbx\\ftx_vector")) {
                 areasHeader.add(area1);
-            } else if (local.startsWith("addon scenery") || local.startsWith("tropicalsim") || local.startsWith("latinvfr") || local.startsWith("ecosystem") || local.startsWith("flytampa") || local.startsWith("simmarket")) {
+            } else if (local.startsWith("addon scenery") || local.startsWith("tropicalsim") || local.startsWith("latinvfr") || local.startsWith("ecosystem") || local.startsWith("flytampa") || local.startsWith("simmarket") || local.startsWith("samscene")) {
                 areasOrdered.add(area1);
             } else if (local.startsWith("orbx")) {
                 areasFooter.add(area1);
