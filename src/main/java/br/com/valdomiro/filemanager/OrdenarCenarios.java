@@ -69,21 +69,21 @@ public class OrdenarCenarios {
             final String local = area1.getLocal().toLowerCase();
 
             if (local.startsWith("scenery") || local.startsWith("orbx\\ftx_vector")) {
-                areasHeader.add(area1);
-            } else if (local.startsWith("addon scenery") || local.startsWith("tropicalsim") || local.startsWith("latinvfr") || local.startsWith("ecosystem") || local.startsWith("flytampa") || local.startsWith("simmarket") || local.startsWith("samscene")) {
-                areasOrdered.add(area1);
-            } else if (local.startsWith("orbx")) {
                 areasFooter.add(area1);
+            } else if (local.startsWith("addon scenery") || local.startsWith("tropicalsim") || local.startsWith("latinvfr") || local.startsWith("ecosystem") || local.startsWith("flytampa") || local.startsWith("simmarket") || local.startsWith("samscene")) {
+                areasHeader.add(area1);
+            } else if (local.startsWith("orbx")) {
+                areasOrdered.add(area1);
             }
         }
 
-        sort(areasOrdered);
-        reverse(areasOrdered);
+        sort(areasHeader);
+        reverse(areasHeader);
 
         areas.clear();
-        areas.addAll(areasHeader);
-        areas.addAll(areasOrdered);
         areas.addAll(areasFooter);
+        areas.addAll(areasOrdered);
+        areas.addAll(areasHeader);
 
         int id = 1;
 
@@ -102,7 +102,7 @@ public class OrdenarCenarios {
         writer.add("Clean_on_Exit=TRUE");
         writer.add("");
 
-        for (final Area area1 : areasHeader) {
+        for (final Area area1 : areasFooter) {
             writer.add(area1.toString());
         }
 
@@ -110,9 +110,10 @@ public class OrdenarCenarios {
             writer.add(area1.toString());
         }
 
-        for (final Area area1 : areasFooter) {
+        for (final Area area1 : areasHeader) {
             writer.add(area1.toString());
         }
+
 
         writeLines(file, writer);
         srcFile.delete();
